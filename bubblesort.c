@@ -23,9 +23,9 @@ float* bubblesort(float array[], int size) {
 }
 
 int main(int argc, char* argv[]) {
-	int i = 0, count = 13;;
+	int i = 0, count = 13;
 	float array[] = {1337, 1, -465, 3.141592653589793, 789, 69, 789, -132, 3.141592653589793, 465, 789, 0, 27};
 	float* sorted = bubblesort(array, count);
-	for (i=0; i < count; printf("%d ", sorted[i]), i++);
+	for (i = 0; i < count; printf("%.2f ", sorted[i]), i++);
 	return 0;
 }
