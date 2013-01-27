@@ -6,7 +6,7 @@ typedef int bool;
 
 float* bubblesort(float array[], int size) {
 	bool swapping = false;
-	int temp;
+	float temp;
 	int i;
 	while (swapping == false) {
 		swapping = true;
