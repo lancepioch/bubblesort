@@ -11,8 +11,7 @@ namespace Bubblesort {
         public static void Main() {
             float[] array = new float[] {1337, 1, -465, 3.141592653589793f, 789, 69, 789, -132, 3.141592653589793f, 465, 789, 0, 27};
             array = bubblesort(array);
-            for (int i=0; i < array.Length; Console.Write(" " + array[i] + " "), i++);
-            // Console.WriteLine("Location of this program: {0}", Environment.CurrentDirectory);
+            for (int i=0; i < array.Length; Console.Write(array[i]), Console.Write(" "), i++);
         }
 
         public static float[] bubblesort(float[] array) {
