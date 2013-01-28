@@ -13,6 +13,5 @@ function bubblesort(array) {
 			}
 		}
 	}
-	while (swapping);
 	return array;
 }

@@ -1,13 +1,7 @@
 using System;
 
 namespace Bubblesort {
-    /// <summary>
-    /// Simple utility type. 
-    /// </summary>
     public class Bubblesort {
-        /// <summary>
-        /// Print out select environment information
-        /// </summary>
         public static void Main() {
             float[] array = new float[] {1337, 1, -465, 3.141592653589793f, 789, 69, 789, -132, 3.141592653589793f, 465, 789, 0, 27};
             array = bubblesort(array);
