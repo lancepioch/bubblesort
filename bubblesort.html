@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			var parent;
+			var timeout = 500;
+			var index = 0;
+			var actions = [];
+			function bubblesort(array, timeout) {
+				actions.push(array.slice(0));
+				for (i = 0; i < array.length; i++) {
+					for (j = 0; j < array.length-1; j++) {
+						if (array[j] > array[j+1]) {
+							var temp = array[j+1];
+							array[j+1] = array[j];
+							array[j] = temp;
+							actions.push(array.slice(0));
+						}
+					}
+				}
+				index = 0;
+				show();
+				return array.slice(0);
+			}
+			function clearsorting(n) {
+				for (i = 0; i < n; i++)
+					parent.children[i].className = "";
+			}
+			function show() {
+				console.log("called");
+				generate(actions[index]);
+				index = index + 1;
+				if (i < actions.length)
+					setTimeout(show, timeout);
+			}
+			function init(array) {
+				parent = parent;
+				generate(array);
+				bubblesort(array, 500);
+			}
+			function generate(array) {
+				if (array === undefined)
+					return;
+				// var array = arr.slice(0);
+				// var parent = document.getElementById("display").children[0];
+				while (parent.firstChild) parent.removeChild(parent.firstChild);
+				for (i = 0; i < array.length; i++) {
+					var item = document.createElement('td');
+					item.innerHTML = array[i];
+					parent.appendChild(item);
+				}
+			}
+		</script>
+		<style type="text/css">
+			#wrapper {
+				width: 900px;
+				margin: 0px auto;
+			}
+			#array {
+				width: 100%;
+			}
+			#display {
+				width: 100%;
+			}
+			#display td {
+				text-align: center;
+				border: 1px solid black;
+			}
+			.sorting {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<label>Comma Separated Values (CSV): 
+				<input type="text" id="array" value="1337, 1, -465, 3.141592653589793, 789, 69, 789, -132, 3.141592653589793, 465, 789, 0, 27" />
+			</label>
+			<button onclick="parent = document.getElementById('display').children[0]; init(document.getElementById('array').value.replace(/\s/g, '').split(',').map(parseFloat));">Generate</button>
+			<table id="display">
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
