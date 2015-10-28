@@ -8,3 +8,5 @@ Currently, it is implemented in:
 - Haxe
 - PHP
 - Python
+
+Please feel free to submit additional languages, PRs will be accepted.
