@@ -1,4 +1,6 @@
-Bubble Sort algorithm implemented in ALL the languages!
+# Bubble Sort
+
+### Bubble Sort algorithm implemented in ALL the languages!
 
 Currently, it is implemented in:
 - C
