@@ -1,12 +1,14 @@
 # Bubble Sort
 
-### Bubble Sort algorithm implemented in ALL the languages!
+### This is a repository dedicated to the bubble sort algorithm which will be implemented in ALL the languages!
 
 Currently, it is implemented in:
-- C
-- Coffeescript
-- C#
-- Javascript
-- Haxe
-- PHP
-- Python
+- C (bubblesort.c)
+- Coffeescript (bubblesort.coffee)
+- C# (bubblesort.cs)
+- Javascript (bubblesort.js)
+- Haxe (bubblesort.hx)
+- PHP (bubblesort.php)
+- Python (bubblesort.py)
+
+Please feel free to submit additional languages, PRs will be accepted.
